@@ -1,0 +1,104 @@
+@import '../styles/Styles.scss';
+
+header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    padding: $header-padding;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+
+    animation: fadeIn .8s ease-in-out;
+
+    &.scrolled {
+        height: calc($header-height - 30px);
+    }
+
+    .logo {
+        h1 {
+            position: relative;
+            font-family: $font-family;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 2px;
+            color: white;
+            cursor: pointer;
+
+            >span {
+                display: inline-block;
+            }
+
+            >span:hover {
+                color: $secondary-color;
+                animation: pulse 1s ease-in-out;
+            }
+
+            @media screen and (max-width: 940px) {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        -ms-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        -ms-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        -ms-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        -ms-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        -ms-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}

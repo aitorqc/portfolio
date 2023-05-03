@@ -1,0 +1,151 @@
+@import '../styles/Styles.scss';
+
+.home {
+  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 60px 40px 40px;
+  margin-top: 90px;
+  flex-grow: 1;
+  min-height: calc(100vh - 90px);
+  opacity: 0;
+
+  animation: fade-in 1.4s ease-in-out both;
+
+  &__image-container {
+    flex-basis: 50%;
+    max-width: 400px;
+    filter: drop-shadow(0.2rem 0.2rem 1rem rgba(255, 255, 255, 0.8));
+  }
+
+  &__image {
+    max-width: 100%;
+    animation: grow-up 1.4s ease-in-out;
+  }
+
+  &__title {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px #333;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-style: italic;
+      margin-top: .8rem;
+      color: $secondary-color;
+    }
+
+    &-breakPoint {
+      margin: 2.5rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .breakPoint {
+        width: 50%;
+        height: 3px;
+        border-radius: 8px;
+        background-color: white;
+      }
+
+      .icon {
+        font-size: 2.5rem;
+        color: white;
+        margin: 0 1rem;
+        filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      &-breakPoint {
+        margin: 1.5rem 0;
+
+        .icon {
+          font-size: 2rem;
+          margin: 0 .5rem;
+        }
+      }
+    }
+  }
+
+  &__skills {
+    font-size: 1.5em;
+    color: white;
+    width: 60%;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+
+      li{
+        text-shadow: 2px 2px #333;
+      }
+    }
+
+    &-breakPoint {
+      color: $secondary-color;
+    }
+
+    @media screen and (max-width: 940px) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 740px) {
+      ul {
+        flex-direction: column;
+        align-items: center;
+
+        li{
+          margin: .4rem;
+        }
+      }
+
+      &-breakPoint {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grow-up {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
