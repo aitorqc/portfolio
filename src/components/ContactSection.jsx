@@ -18,11 +18,11 @@ export default function ContactSection() {
                 </a>
             </div>
             <div className="contact__info__others">
-                <a href="https://www.linkedin.com/in/aitor-quinoa-web-developer/" className="contact__info__others__item" target="_blank">
+                <a href="https://www.linkedin.com/in/aitor-quinoa-web-developer/" className="contact__info__others__item" rel="noopener noreferrer" target="_blank">
                     <FaLinkedin />
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/aitorqc" className="contact__info__others__item" target="_blank">
+                <a href="https://github.com/aitorqc" className="contact__info__others__item" rel="noopener noreferrer" target="_blank">
                     <FaGithub />
                     <span>GitHub</span>
                 </a>

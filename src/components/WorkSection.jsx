@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './WorkSection.scss';
+import WorkCard from './WorkCard';
 
 const works = [
     {
@@ -51,7 +52,7 @@ const works = [
     {
         id: 6,
         title: 'Gym App',
-        description: 'Created my personal portfolio website using Gatsby',
+        description: 'Guía de ejercicios para los distinto grupos musculares',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/gym-app/main/public/Captura2.png',
         tags: ['React', 'MUI', 'API'],
         demoUrl: 'https://aquicor.epizy.com/',
@@ -64,28 +65,7 @@ export default function WorkSection() {
         <div className="work">
             <div className="work__list">
                 {works.map((work) => (
-                    <div key={work.id} className="work__card">
-                        <img className="work__image" src={work.imageUrl} alt={work.title} />
-                        <div className="work__info">
-                            <h3 className="work__title">{work.title}</h3>
-                            <p className="work__description">{work.description}</p>
-                            <div className="work__tags">
-                                {work.tags.map((tag) => (
-                                    <span key={tag} className="work__tags__tag">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                            <div className="work__links">
-                                <a href={work.demoUrl} className="work__links__link" target="_blank" rel="noopener noreferrer">
-                                    Link
-                                </a>
-                                <a href={work.codeUrl} className="work__links__link" target="_blank" rel="noopener noreferrer">
-                                    Codigo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <WorkCard {...work}/>
                 ))}
             </div>
         </div>

@@ -31,13 +31,15 @@ header {
             color: white;
             cursor: pointer;
 
+            animation: pulse 1.4s ease-in-out;
+
             >span {
                 display: inline-block;
             }
 
             >span:hover {
                 color: $secondary-color;
-                animation: pulse 1s ease-in-out;
+                animation: pulse 1s ease-in-out infinite;
             }
 
             @media screen and (max-width: 940px) {

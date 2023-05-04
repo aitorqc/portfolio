@@ -26,6 +26,7 @@
   }
 
   &__title {
+    width: 60%;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -56,17 +57,20 @@
       width: 100%;
 
       .breakPoint {
-        width: 50%;
+        width: 60%;
         height: 3px;
         border-radius: 8px;
         background-color: white;
+
+        animation: slide-grow 2s ease-in-out;
       }
 
       .icon {
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: white;
         margin: 0 1rem;
-        filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+
+        animation: .5s forwards 1.4s 1 flash;
       }
     }
 
@@ -147,5 +151,25 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes slide-grow {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes flash {
+  from {
+    filter: drop-shadow(0rem 0rem 0rem rgb(0, 0, 0));
+  }
+
+  to {
+    filter: drop-shadow(0rem 0rem .8rem rgb(255, 255, 255));
   }
 }
