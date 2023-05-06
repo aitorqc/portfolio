@@ -1,18 +1,7 @@
 @import '../styles/Styles.scss';
 
 .home {
-  font-family: $font-family;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $primary-color;
-  padding: 60px 40px 40px;
-  margin-top: 90px;
-  flex-grow: 1;
-  min-height: calc(100vh - 90px);
-  opacity: 0;
-
-  animation: fade-in 1.4s ease-in-out both;
+  @extend .general-section;
 
   &__image-container {
     flex-basis: 50%;

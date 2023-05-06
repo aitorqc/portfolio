@@ -1,7 +1,8 @@
 import React from 'react'
 
-import './WorkSection.scss';
 import WorkCard from './WorkCard';
+
+import './WorkSection.scss';
 
 const works = [
     {
@@ -61,13 +62,14 @@ const works = [
 ];
 
 export default function WorkSection() {
+
     return (
-        <div className="work">
+        <div className="work" >
             <div className="work__list">
-                {works.map((work) => (
-                    <WorkCard {...work}/>
+                {works.map((work, index) => (
+                    <WorkCard key={index} {...work} />
                 ))}
             </div>
-        </div>
+        </div >
     )
 }

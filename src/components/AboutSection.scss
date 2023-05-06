@@ -1,18 +1,7 @@
 @import '../styles/Styles.scss';
 
 .about {
-  font-family: $font-family;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $primary-color;
-  padding: 60px 40px 40px;
-  margin-top: 90px;
-  flex-grow: 1;
-  min-height: calc(100vh - 90px);
-  opacity: 0;
-
-  animation: fade-in 1.4s ease-in-out both;
+  @extend .general-section;
 
   &__content {
     position: relative;
@@ -91,10 +80,18 @@
     background: url("../assets/photo.png") no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 10%;
-    filter: drop-shadow(0.8rem 0.8rem 0rem $secondary-color);
+    border-radius: 14px;
+    filter: drop-shadow(0.6rem 0.6rem 0rem $secondary-color);
+    cursor: pointer;
+    transition: .5s all ease-in-out;
 
     animation: rotate-in 1s ease-in-out forwards;
+
+    &:hover{
+      right: 90px;
+      filter: drop-shadow(1rem 1rem 0rem $secondary-color);
+      transform: rotate(360deg);
+    }
 
     @media (max-width: 980px) {
       width: 180px;

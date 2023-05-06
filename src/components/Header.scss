@@ -39,7 +39,7 @@ header {
 
             >span:hover {
                 color: $secondary-color;
-                animation: pulse 1s ease-in-out infinite;
+                animation: pulse 1s ease-in-out;
             }
 
             @media screen and (max-width: 940px) {

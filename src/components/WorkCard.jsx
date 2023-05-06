@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { motion } from "framer-motion";
 
 import './WorkCard.scss';
 
-export default function WorkCard({id, imageUrl, title, description, tags, demoUrl, codeUrl}) {
+export default function WorkCard({ id, imageUrl, title, description, tags, demoUrl, codeUrl }) {
     return (
-        <div key={id} className="work__card">
+        <motion.div
+            className="work__card"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: .5, duration: id }}
+        >
             <img className="work__image" src={imageUrl} alt={title} />
             <div className="work__info">
                 <h3 className="work__title">{title}</h3>
@@ -25,6 +31,6 @@ export default function WorkCard({id, imageUrl, title, description, tags, demoUr
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
