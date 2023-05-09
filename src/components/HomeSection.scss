@@ -32,6 +32,7 @@
     }
 
     p {
+      min-height: 33px;
       position: relative;
       font-size: 1.8rem;
       font-style: italic;
@@ -41,12 +42,12 @@
 
     p::after {
       content: "";
-      height: 25px;
-      width: 3px;
+      height: 26px;
+      width: 4px;
       background-color: #00CF2E;
       position: absolute;
-      top: 5px;
-      right: -8px;
+      top: 3px;
+      right: -10px;
       transform: skew(350deg, 360deg);
 
       animation: fade-in .7s ease-in-out infinite;
@@ -86,6 +87,11 @@
         font-size: 1.6rem;
       }
 
+      p::after {
+        height: 22px;
+        top: 3px;
+      }
+
       &-breakPoint {
         margin: 1.5rem 0;
 
@@ -103,6 +109,12 @@
 
       p {
         font-size: 1.4rem;
+      }
+
+      p::after {
+        height: 19px;
+        width: 3px;
+        right: -8px;
       }
     }
   }

@@ -11,19 +11,32 @@ import AVATAR from '../assets/avatar.png';
 
 export default function HomeSection() {
     const [text, setText] = useState("")
-    const [fullText, setFullText] = useState(
-        "Web Developer"
-    )
+    const [texts, setTexts] = useState([
+        "Web Developer",
+        "Front-End",
+        "Back-End",
+        "Web Designer",
+        "UI / UX"
+    ])
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        if (index < fullText.length) {
+        const currentText = texts[index]
+        if (text === currentText) {
+            // If the current text has already been fully displayed,
+            // wait for a few seconds and then move on to the next text
             setTimeout(() => {
-                setText(text + fullText[index])
-                setIndex(index + 1)
+                setIndex((index + 1) % texts.length);
+                setText("");
+            }, 3000)
+        } else if (index < texts.length) {
+            // If the current text hasn't been fully displayed yet,
+            // display the next character after a short delay
+            setTimeout(() => {
+                setText(text + currentText[text.length]);
             }, 100)
         }
-    }, [index]);
+    }, [text, index, texts]);
 
     return (
         <section className="home">
