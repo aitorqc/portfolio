@@ -31,11 +31,25 @@
       text-shadow: 2px 2px #333;
     }
 
-    h3 {
+    p {
+      position: relative;
       font-size: 1.8rem;
       font-style: italic;
       margin-top: .8rem;
       color: $secondary-color;
+    }
+
+    p::after {
+      content: "";
+      height: 25px;
+      width: 3px;
+      background-color: #00CF2E;
+      position: absolute;
+      top: 5px;
+      right: -8px;
+      transform: skew(350deg, 360deg);
+
+      animation: fade-in .7s ease-in-out infinite;
     }
 
     &-breakPoint {
@@ -68,8 +82,8 @@
         font-size: 2.5rem;
       }
 
-      h3 {
-        font-size: 1.4rem;
+      p {
+        font-size: 1.6rem;
       }
 
       &-breakPoint {
@@ -79,6 +93,16 @@
           font-size: 2rem;
           padding: 0 .8rem;
         }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
       }
     }
   }
