@@ -15,6 +15,10 @@
             font-size: 1rem;
             margin-bottom: 1.8rem;
         }
+
+        @media (max-width: 480px) {
+            margin-top: 0;
+        }
     }
 
     &__container {

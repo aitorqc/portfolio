@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GiMouse } from 'react-icons/gi';
+import {TfiMouseAlt} from 'react-icons/tfi';
 import { VscDebugBreakpointLogUnverified } from 'react-icons/vsc';
 
 import "./HomeSection.scss";
@@ -19,7 +19,7 @@ export default function HomeSection() {
                 <h3>Web Developer</h3>
                 <div className='home__title-breakPoint'>
                     <div className='breakPoint'></div>
-                    <div className="icon"><GiMouse /></div>
+                    <div className="icon"><TfiMouseAlt/></div>
                     <div className='breakPoint'></div>
                 </div>
             </div>

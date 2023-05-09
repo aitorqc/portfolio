@@ -1,9 +1,10 @@
 
 import React from 'react';
 
+
+import { RiUserSearchLine } from 'react-icons/ri';
 import { MdDesignServices } from 'react-icons/md';
 import { FaCode } from 'react-icons/fa';
-import { RiUserSearchLine } from 'react-icons/ri';
 
 import "./AboutSection.scss";
 
@@ -36,38 +37,35 @@ export default function AboutSection() {
                         </div>
                     </div>
                     <div class="about__container__outlook__info__data" data-animation="fade-in">
-                        <h3 class="info__data__title">Fast</h3>
+                        <h3 class="info__data__title">Investigación</h3>
                         <p>
-                            Fast load times and lag free interaction, my highest
-                            priority.
+                            Familiarizarse con el proyecto y determinar métodos para abordar las necesidades y requisitos específicos del cliente.
                         </p>
                     </div>
                 </div>
                 <div className='about__container__outlook__info'>
                     <div class="about__container__outlook__info__diamond" data-animation="flip-in-x" >
                         <div class="diamond__icon">
-                            <RiUserSearchLine />
+                            <MdDesignServices />
                         </div>
                     </div>
                     <div class="about__container__outlook__info__data" data-animation="fade-in">
-                        <h3 class="info__data__title">Fast</h3>
+                        <h3 class="info__data__title">Diseño</h3>
                         <p>
-                            Fast load times and lag free interaction, my highest
-                            priority.
+                            El diseño no solo es la apariencia superficial de un producto. Es un proceso de investigación de mercado, investigación técnica, y visualización de un concepto.
                         </p>
                     </div>
                 </div>
                 <div className='about__container__outlook__info'>
                     <div class="about__container__outlook__info__diamond" data-animation="flip-in-x" >
                         <div class="diamond__icon">
-                            <RiUserSearchLine />
+                            <FaCode />
                         </div>
                     </div>
                     <div class="about__container__outlook__info__data" data-animation="fade-in">
-                        <h3 class="info__data__title">Fast</h3>
+                        <h3 class="info__data__title">Desarrollo</h3>
                         <p>
-                            Fast load times and lag free interaction, my highest
-                            priority.
+                            Los resultados de las fases de investigación y diseño se utilizan para el desarrollo de productos específicos, incluidos materiales, sistemas y métodos.
                         </p>
                     </div>
                 </div>
