@@ -43,7 +43,6 @@ import teamsIcon from '../assets/skill-icons/teams.png';
 import trelloIcon from '../assets/skill-icons/trello.png';
 
 export default function AboutSection() {
-
     const cards = [
         {
             skill: "Front-End",
@@ -100,11 +99,11 @@ export default function AboutSection() {
             </div>
 
             <div className='about__container__skills'>
-                    {cards.map((item, index) => {
-                        return (
-                            <SkillCard key={index} skill={item.skill} icons={item.icons} />
-                        )
-                    })}
+                {cards.map((item, index) => {
+                    return (
+                        <SkillCard key={index} skill={item.skill} icons={item.icons} />
+                    )
+                })}
             </div>
         </section>
     );

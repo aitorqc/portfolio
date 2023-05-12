@@ -137,7 +137,7 @@
       color: $secondary-color;
 
       svg{
-        animation: pulse 2s ease-in-out infinite;
+        animation: increase-size 2s ease-in-out infinite;
       }
     }
 
@@ -182,7 +182,7 @@
   }
 }
 
-@keyframes pulse{
+@keyframes increase-size{
   0% {
     transform: scale(.8);
   }
