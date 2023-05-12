@@ -18,51 +18,66 @@ import DOC from '../assets/CV_Aitor_Quiñoa_A.pdf';
 import cssIcon from '../assets/skill-icons/css-3.png';
 import htmlIcon from '../assets/skill-icons/html-5.png';
 import jsIcon from '../assets/skill-icons/js.png';
+import tsIcon from '../assets/skill-icons/typescript.png';
+import phpIcon from '../assets/skill-icons/php.png';
+import nodeIcon from '../assets/skill-icons/nodejs.png';
+import expIcons from '../assets/skill-icons/express-js.png';
+import gitIcon from '../assets/skill-icons/git.png';
+import gitHubIcon from '../assets/skill-icons/github.png';
+import gitLabIcon from '../assets/skill-icons/gitlab.png';
+import btsIcon from '../assets/skill-icons/bootstrap.png';
+import nxtIcon from '../assets/skill-icons/next-js.png'
+import reactIcon from '../assets/skill-icons/react.png';
+import sassIcon from '../assets/skill-icons/sass.png';
+import twIcon from '../assets/skill-icons/tailwindcss.png';
+import muiIcon from '../assets/skill-icons/material-ui.png';
+import vsIcon from '../assets/skill-icons/visual-basico.png';
+import postIcon from '../assets/skill-icons/postman.png';
+import figmaIcon from '../assets/skill-icons/figma.png';
+import mysqlIcon from '../assets/skill-icons/mysql.png';
+import firebaseIcon from '../assets/skill-icons/firebase.png';
+import mariaIcon from '../assets/skill-icons/mariadb.png';
+import gantIcon from '../assets/skill-icons/gantt-chart.png';
+import slackIcon from '../assets/skill-icons/slack.png';
+import teamsIcon from '../assets/skill-icons/teams.png';
+import trelloIcon from '../assets/skill-icons/trello.png';
 
 export default function AboutSection() {
 
     const cards = [
         {
             skill: "Front-End",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [cssIcon, htmlIcon, jsIcon, tsIcon]
         },
         {
             skill: "Back-End",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [phpIcon, nodeIcon, expIcons]
+        },
+        {
+            skill: "Bases de Datos",
+            icons: [mysqlIcon, mariaIcon, firebaseIcon]
         },
         {
             skill: "Control de Versiones",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [gitIcon, gitHubIcon, gitLabIcon]
         },
         {
             skill: "Frameworks",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [btsIcon, nxtIcon]
         },
         {
             skill: "Librerias",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [reactIcon, sassIcon, twIcon, muiIcon]
         },
         
         {
             skill: "Herramientas de Desarrollo",
-            icons: [cssIcon, htmlIcon, jsIcon]
-        },
-        {
-            skill: "Bases de Datos",
-            icons: [cssIcon, htmlIcon, jsIcon]
-        },
-        {
-            skill: "Seguridad Web",
-            icons: [cssIcon, htmlIcon, jsIcon]
+            icons: [vsIcon, postIcon, figmaIcon]
         },
         {
             skill: "Trabajo en Equipo",
-            icons: [cssIcon, htmlIcon, jsIcon]
-        },
-        {
-            skill: "Aprendizaje continuo",
-            icons: [cssIcon, htmlIcon, jsIcon]
-        },
+            icons: [teamsIcon, slackIcon, trelloIcon, gantIcon]
+        }
     ]
 
     return (
