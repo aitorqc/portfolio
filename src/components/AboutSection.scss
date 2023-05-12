@@ -368,8 +368,8 @@
           display: none;
 
           img {
-            min-width: 65px;
-            max-width: 65px;
+            min-width: 50px;
+            max-width: 50px;
             margin: 0.3rem;
           }
         }
@@ -403,13 +403,6 @@
 
           h2 {
             font-size: 1.4rem;
-          }
-
-          &__img {
-            img {
-              min-width: 50px;
-              max-width: 50px;
-            }
           }
         }
       }

@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-
 import { RiUserSearchLine } from 'react-icons/ri';
 import { MdDesignServices } from 'react-icons/md';
 import { FaCode } from 'react-icons/fa';
@@ -28,6 +27,7 @@ import gitLabIcon from '../assets/skill-icons/gitlab.png';
 import btsIcon from '../assets/skill-icons/bootstrap.png';
 import nxtIcon from '../assets/skill-icons/next-js.png'
 import reactIcon from '../assets/skill-icons/react.png';
+import jqIcon from '../assets/skill-icons/jquery.png';
 import sassIcon from '../assets/skill-icons/sass.png';
 import twIcon from '../assets/skill-icons/tailwindcss.png';
 import muiIcon from '../assets/skill-icons/material-ui.png';
@@ -67,9 +67,9 @@ export default function AboutSection() {
         },
         {
             skill: "Librerias",
-            icons: [reactIcon, sassIcon, twIcon, muiIcon]
+            icons: [reactIcon, jqIcon, sassIcon, twIcon, muiIcon]
         },
-        
+
         {
             skill: "Herramientas de Desarrollo",
             icons: [vsIcon, postIcon, figmaIcon]
@@ -100,11 +100,11 @@ export default function AboutSection() {
             </div>
 
             <div className='about__container__skills'>
-                {cards.map((item, index) => {
-                    return (
-                        <SkillCard key={index} skill={item.skill} icons={item.icons} />
-                    )
-                })}
+                    {cards.map((item, index) => {
+                        return (
+                            <SkillCard key={index} skill={item.skill} icons={item.icons} />
+                        )
+                    })}
             </div>
         </section>
     );
