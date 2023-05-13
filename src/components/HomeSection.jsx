@@ -11,14 +11,14 @@ import AVATAR from '../assets/avatar.png';
 
 export default function HomeSection() {
     const [text, setText] = useState("")
-    const [texts, setTexts] = useState([
+    const [index, setIndex] = useState(0)
+    const texts = [
         "Web Developer",
         "Front-End",
         "Back-End",
         "Web Designer",
         "UI / UX"
-    ])
-    const [index, setIndex] = useState(0)
+    ];
 
     useEffect(() => {
         const currentText = texts[index]
@@ -36,7 +36,7 @@ export default function HomeSection() {
                 setText(text + currentText[text.length]);
             }, 100)
         }
-    }, [text, index, texts]);
+    }, [text, index]);
 
     return (
         <section className="home">
