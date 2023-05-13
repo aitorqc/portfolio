@@ -7,5 +7,5 @@
 ## Capturas
 
 ![Home](https://github.com/aitorqc/portfolio/blob/main/public/home.png)
-![Contact](https://github.com/aitorqc/port/blob/main/public/captura.png)
+![Contact](https://github.com/aitorqc/portfolio/blob/main/public/captura.png)
 
