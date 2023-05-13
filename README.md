@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# React Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Web Url
+
+[PORTFOLIO](https://www.aitorqc.es/)
+
+## Capturas
+
+![Home](https://github.com/aitorqc/portfolio/blob/main/public/home.png)
+![Contact](https://github.com/aitorqc/port/blob/main/public/captura.png)
 
