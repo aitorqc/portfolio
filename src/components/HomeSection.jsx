@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useState, useEffect } from "react";
 // import Typical from 'react-typical'
 
@@ -12,13 +12,11 @@ import AVATAR from '../assets/avatar.png';
 export default function HomeSection() {
     const [text, setText] = useState("")
     const [index, setIndex] = useState(0)
-    const texts = [
-        "Web Developer",
+    const texts = useMemo(() => ["Web Developer",
         "Front-End",
         "Back-End",
         "Web Designer",
-        "UI / UX"
-    ];
+        "UI / UX"], []);
 
     useEffect(() => {
         const currentText = texts[index]
@@ -36,7 +34,7 @@ export default function HomeSection() {
                 setText(text + currentText[text.length]);
             }, 100)
         }
-    }, [text, index]);
+    }, [text, index, texts]);
 
     return (
         <section className="home">
@@ -45,11 +43,6 @@ export default function HomeSection() {
             </div>
             <div className="home__title">
                 <h1>Aitor Quiñoa</h1>
-                {/* <Typical
-                    steps={["Web Developer", 2000, "Front-end", 2000, "Back-end", 2000, "Design", 2000, "UI/UX", 2000]}
-                    loop={Infinity}
-                    wrapper='p'
-                /> */}
                 <p>{text}</p>
                 <div className='home__title-breakPoint'>
                     <div className='breakPoint'></div>
