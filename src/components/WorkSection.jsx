@@ -4,9 +4,16 @@ import WorkCard from './WorkCard';
 
 import './WorkSection.scss';
 
-const works = [
+let works = [
     {
-        id: 1,
+        title: 'Blog about programming',
+        description: 'blog de programación donde los usuarios pueden leer y compartir artículos',
+        imageUrl: 'https://raw.githubusercontent.com/aitorqc/blog-programacion/main/images/captures/home.png',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
+        demoUrl: 'https://blogaboutprogramming.online',
+        codeUrl: 'https://github.com/aitorqc/blog-programacion',
+    },
+    {
         title: 'Cosmetic E-commerce',
         description: 'Web de cosmeticos desarrollada con React y CSS ',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/cosmetic-ecommerce/main/public/captura.png',
@@ -15,7 +22,6 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/cosmetic-ecommerce',
     },
     {
-        id: 2,
         title: 'FitClub',
         description: 'Web de afiliación a un programa de entreno',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/fitclub/main/public/Captura.png',
@@ -24,7 +30,6 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/fitclub',
     },
     {
-        id: 3,
         title: 'ReactFlix',
         description: 'Listado de películas populares y extrenos',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/reactflix/master/public/Captura.png',
@@ -33,7 +38,6 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/reactflix',
     },
     {
-        id: 4,
         title: 'Game Store',
         description: 'Listado de videojuegos con filtro por categorias',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/game-store/main/public/Captura.png',
@@ -42,7 +46,6 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/game-store',
     },
     {
-        id: 5,
         title: 'Digital E-commerce',
         description: 'Web de venta para dispositivos de sonido',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/ecommerce/main/public/Captura1.png',
@@ -51,7 +54,6 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/ecommerce',
     },
     {
-        id: 6,
         title: 'Gym App',
         description: 'Guía de ejercicios para los distinto grupos musculares',
         imageUrl: 'https://raw.githubusercontent.com/aitorqc/gym-app/main/public/Captura2.png',
@@ -60,6 +62,11 @@ const works = [
         codeUrl: 'https://github.com/aitorqc/gym-app',
     },
 ];
+
+works = works.map((item, index) => ({
+    ...item,
+    id: index + 1,
+}));
 
 export default function WorkSection() {
 
